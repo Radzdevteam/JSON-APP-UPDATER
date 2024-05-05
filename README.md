@@ -4,6 +4,9 @@
 
 Radz App Updater 2024 is an Android library that helps developers to keep their apps up-to-date by checking for updates automatically. It fetches the latest version details from a provided JSON file and prompts the user to update the app if a new version is available.
 
+<img src="image_2024-05-05_175926415.png" alt="Screenshot of feature" title="Feature Screenshot" width="300"/>
+
+
 ## How to Include
 
 ### Step 1. Add the repository to your project settings.gradle:
@@ -45,3 +48,5 @@ The JSON file at the provided URL should have the following format:
   ]
 }
    ```
+
+
