@@ -33,7 +33,7 @@ dependencies {
 
 In your `MainActivity`, add the following code to check for updates:
 ```groovy
- new RadzUpdater(this, "https://radzvpn.com/raw?id=128").checkForUpdates();
+ new RadzUpdater(this, "https://raw.githubusercontent.com/Radzdevteam/JSON-APP-UPDATER/master/updater.json").checkForUpdates();
    ```
 
 ## JSON Format
@@ -41,7 +41,7 @@ In your `MainActivity`, add the following code to check for updates:
 The JSON file at the provided URL should have the following format:
 ```groovy
 {
-  "latestVersion": "3.0.1",
+  "latestVersion": "2.0.1",
   "url": "https://github.com/Radzdevteam/RadzUpdater2024/radzupdater.apk",
   "releaseNotes": [
     "- Bug fixes"
