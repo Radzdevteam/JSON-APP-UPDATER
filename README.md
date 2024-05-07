@@ -24,7 +24,7 @@ dependencyResolutionManagement {
 ### Step 2. Add the dependency
 ```groovy
 dependencies {
-     implementation ("com.github.Radzdevteam:artifact:1.1")
+     implementation ("com.github.Radzdevteam:artifact:1.2")
 }
    ```
 
