@@ -1,9 +1,10 @@
 # Radz App Updater 2024
 
-[![](https://jitpack.io/v/Radzdevteam/Sign_Checker.svg)](https://jitpack.io/#Radzdevteam/Sign_Checker)
+[![](https://jitpack.io/v/Radzdevteam/artifact.svg)](https://jitpack.io/#Radzdevteam/artifact)
 
-Introducing Radz Sign Checker 2024: The ultimate SHA-1 signature verifier for Android apps. Ensure your app's integrity from KitKat 4.4 to Android 14. Simple, fast, and reliable.
+Radz App Updater 2024 is an Android library that helps developers to keep their apps up-to-date by checking for updates automatically. It fetches the latest version details from a provided JSON file and prompts the user to update the app if a new version is available.
 
+<img src="screenshot_dialog.jpg" alt="Screenshot of feature" title="Feature Screenshot" width="300"/>  <img src="screenshot_success.jpg" alt="Screenshot of feature" title="Feature Screenshot" width="300"/>
 
 ## How to Include
 
@@ -23,7 +24,7 @@ dependencyResolutionManagement {
 ### Step 2. Add the dependency
 ```groovy
 dependencies {
-     implementation ("com.github.Radzdevteam:Sign_Checker:1.0")
+     implementation ("com.github.Radzdevteam:artifact:1.2")
 }
    ```
 
@@ -31,10 +32,19 @@ dependencies {
 
 In your `MainActivity`, add the following code to check for updates:
 ```groovy
-val cs = Security(this)
-cs.setSHA1("0c:55:6b:47:5d:a0:c0:eb:24:b1:a6:ab:fa:e7:1e:b1:c7:90:66:9e")
-cs.check()
+ new RadzUpdater(this, "https://raw.githubusercontent.com/Radzdevteam/JSON-APP-UPDATER/master/updater.json").checkForUpdates();
    ```
 
+## JSON Format
 
+The JSON file at the provided URL should have the following format:
+```groovy
+{
+  "latestVersion": "2.0.1",
+  "url": "https://github.com/Radzdevteam/RadzUpdater2024/radzupdater.apk",
+  "releaseNotes": [
+    "- Bug fixes"
+  ]
+}
+   ```
 
